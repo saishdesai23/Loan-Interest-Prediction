@@ -112,7 +112,7 @@ for ele in para:
                            labels={'color': ele.lower() + " per loan approval", 'locations':'states'}
                           )
   
-  fig.show()
+  fig.show("png")
 
 """To normalize and compare the distribution we have calculated the total value of each factor and divded it with the loan appoval count for each state.
 
@@ -586,7 +586,9 @@ print('r2 socre is ',score_rf)
 print('mean_sqrd_error is==',mean_squared_error(y_test,y_prediction_rf))
 print('root_mean_squared error of is==',np.sqrt(mean_squared_error(y_test,y_prediction_rf)))
 
-"""#7. Description of my approach
+"""After using both the regression algorthims we can conclude that for any split of the train and test data the model is giving good results in terms prediction error and r squared value. The performances of the model will be tested when it is introduced to an unknown futre test data.
+
+#7. Description of my approach
 
 The approach can be divded in 6 parts
 
@@ -646,8 +648,3 @@ Even backward subset selection would have been a feasible option.
 
 Lastly, the column 'emp_title' could have been used by tokenizing the words in the title and vectorizing using TF-IDF for predicting the interest_rate.
 """
-
-# Commented out IPython magic to ensure Python compatibility.
-# %%shell
-# jupyter nbconvert --to html /content/case_study_1_analysis.ipynb
-
